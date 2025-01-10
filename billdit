@@ -1,4 +1,13 @@
 #!/bin/sh
 set -e
-make ARCH=x86 oldnoconfig
-make ARCH=x86 bzImage
+
+ARCH=x86
+if [ ! -d arch/${ARCH} ] ; then
+    ARCH=i386
+fi
+
+TARGET=oldnoconfig
+if make -q ARCH=${ARCH} ${TARGET} ; then
+    make ARCH=${ARCH} ${TARGET}
+fi
+make ARCH=${ARCH} bzImage
