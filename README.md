@@ -1,3 +1,5 @@
+## ReKernel: Room 386
+
 I'm trying to build a Linux kernel using the last of the 386 support
 to use on my Toshiba T5200 386 luggable with 4MB of RAM. The last
 version of Linux that will actually build is v3.3.8.

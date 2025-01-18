@@ -1,4 +1,4 @@
-IMAGE=old-wheezer
+IMAGE=room386
 VERSION=1.0
 
 docker-build: Dockerfile cntnr-init
