@@ -1,5 +1,8 @@
 #!/bin/sh
-set -e
+set -ex
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+LINUX_DIR=${1:-$SCRIP_DIR}
+cd ${LINUX_DIR}
 
 ARCH=x86
 if [ ! -d arch/${ARCH} ] ; then
